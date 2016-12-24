@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.lib.henrasn' // CREATE A GROUP ID FOR YOUR LIBRARY
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.lib.henrasn' // CREATE A GROUP ID FOR YOUR LIBRARY
+                artifactId 'androidformvalidator' // THE NAME OF YOUR MODULE
+
+                name 'androidformvalidator' // YOUR LIBRARY NAME
+                description 'A collections of methods to work with Date objects.' // YOUR LIBRARY DESCRIPTION
+                url 'https://github.com/henrasn/AndroidFormValidator' // YOUR SITE
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'henrasn' //YOUR ID
+                        name 'Henra Setia Nugraha' //YOUR NAME
+                        email 'henra.sn@gmail.com' //YOUR EMAIL
+                    }
+                }
+                scm {
+                    connection 'https://github.com/henrasn/AndroidFormValidator.git' // YOUR GIT REPO
+                    developerConnection 'https://github.com/henrasn/AndroidFormValidator.git' // YOUR GIT REPO
+                    url 'https://github.com/henrasn/AndroidFormValidator' // YOUR SITE
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:validate="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.henrasetianugraha.validation.MainActivity">
+
+    <com.example.henrasetianugraha.mylibrary.EditTextValidator
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        validate:required="true"
+        android:inputType="textEmailAddress"/>
+
+    <com.example.henrasetianugraha.mylibrary.EditTextValidator
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        validate:email_validate="true"/>
+
+    <com.example.henrasetianugraha.mylibrary.EditTextValidator
+        android:id="@+id/min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        validate:min_length_validate="5"/>
+
+    <com.example.henrasetianugraha.mylibrary.EditTextValidator
+        android:id="@+id/max"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        validate:max_length_validate="10"/>
+
+    <com.example.henrasetianugraha.mylibrary.SpinnerValidator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        validate:spinner_required="true"
+        validate:ms_hint="chose one"
+        android:id="@+id/spinner">
+
+    </com.example.henrasetianugraha.mylibrary.SpinnerValidator>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="test"
+        android:id="@+id/test_button"/>
+</LinearLayout>

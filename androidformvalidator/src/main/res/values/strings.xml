@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Android Form Validator</string>
+    <string name="is_required">is required</string>
+    <string name="email_not_valid">email not valid</string>
+    <declare-styleable name="EditTextValidator">
+        <attr name="required" format="boolean" />
+        <attr name="email_validate" format="boolean" />
+        <attr name="min_length_validate" format="integer" />
+        <attr name="max_length_validate" format="integer" />
+        <attr name="error_message" format="string" />
+        <attr name="field_name" format="string" />
+    </declare-styleable>
+    <declare-styleable name="SpinnerValidator">
+        <attr name="spinner_required" format="boolean" />
+    </declare-styleable>
+</resources>
