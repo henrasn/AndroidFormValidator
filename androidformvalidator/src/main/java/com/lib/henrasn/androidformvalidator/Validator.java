@@ -12,8 +12,8 @@ public class Validator {
     private Object[] fields;
     private List<Boolean> validationResult;
 
-    private Validator(ValidatorBuilder builder) {
-        this.fields = builder.fields;
+    public Validator(Object[] fields) {
+        this.fields = fields;
         this.validationResult = new ArrayList<>();
     }
 
@@ -26,20 +26,9 @@ public class Validator {
                     validationResult.add(((SpinnerValidator) view).isValid());
                 }
             }
+        }else{
+            return false;
         }
         return !validationResult.contains(false);
-    }
-
-    public static class ValidatorBuilder {
-        Object[] fields;
-
-        public ValidatorBuilder addField(Object[] fields) {
-            this.fields = fields;
-            return this;
-        }
-
-        public Validator build() {
-            return new Validator(this);
-        }
     }
 }

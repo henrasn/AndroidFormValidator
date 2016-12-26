@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final Object[] objects = {empty,email,spinner};
-                boolean b = new Validator.ValidatorBuilder().addField(objects).build().validate();
+                boolean b = new Validator(objects).validate();
                 if (b){
 
                 }
