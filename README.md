@@ -4,15 +4,17 @@
 >Spinner was using [material spinner](https://github.com/ganfra/MaterialSpinner)
 
 ###### Gradle
-> compile 'com.lib.henrasn:androidformvalidator:0.0.1'
+<pre><code> compile 'com.lib.henrasn:androidformvalidator:0.0.1'</code></pre>
 
 Adding view to xml layout
-><com.lib.henrasn.androidformvalidator.EditTextValidator
->        app:error_message="this is message error"
->        app:required="true" />
+```xml
+<com.lib.henrasn.androidformvalidator.EditTextValidator
+  app:error_message="this is message error"
+  app:required="true" />
+```
 
 add view to array of Object
->Obejct[] viewObject = {view1, view2, view3, ...}
+<pre><code>Obejct[] viewObjects = {view1, view2, view3, ...}</code></pre>
 
 execute validation
->boolean isvalid = new Validator(objects).validate();
+<pre><code>boolean isvalid = new Validator(viewObjects).validate();</code></pre>
