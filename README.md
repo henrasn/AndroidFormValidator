@@ -4,7 +4,7 @@
 >Spinner was using [material spinner](https://github.com/ganfra/MaterialSpinner)
 
 ###### Gradle
-<pre><code> compile 'com.lib.henrasn:androidformvalidator:0.0.1'</code></pre>
+<pre><code> compile 'com.lib.henrasn:androidformvalidator:0.0.5'</code></pre>
 
 Adding view to xml layout
 ```xml
